@@ -100,7 +100,7 @@ router.delete('/:id', getBook, async (req, res) => {
         await book.deleteOne({
             _id: book._id
         });
-        res.json({ message: `Book ${book.title} has been deleted` });
+        res.json({ message: `The book ${book.title} has been successfully deleted` });
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
