@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
         const books = await Book.find();
         console.log('GET FINDALL',books);
         if(books.length === 0) {
-            return res.status(200).json({ message: 'No books found' });
+            return res.status(204).json({ message: 'No books found' });
         }
         res.json(books);
     } catch (err) {
